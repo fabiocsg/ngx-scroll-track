@@ -1,0 +1,32 @@
+:host {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  max-height: var(--navbar-height);
+  background: var(--navbar-bg);
+  width: 100vw;
+  padding: 8px;
+  margin: 0;
+}
+
+.item {
+  margin-right: 8px;
+  display: inline-block;
+  border: 2px solid var(--navbar-idle);
+  border-radius: 4px;
+  color: var(--navbar-idle);
+  padding: 8px;
+  cursor: pointer;
+  transition: border-color 100ms linear;
+}
+
+.item:hover {
+  border-color: var(--navbar-hover);
+  color: var(--navbar-hover);
+}
+
+.item.active {
+  border-color: var(--navbar-active-border);
+  color: var(--navbar-active-color);
+}

@@ -1,0 +1,30 @@
+<div class="menu">
+  <div class="menu-item" scrollListener="item1" activeClass="active">Main 1</div>
+  <div class="menu-item" scrollListener="item2" activeClass="active">Main 2</div>
+  <div class="menu-item" scrollListener="item3" activeClass="active">Main 3</div>
+  <div class="menu-item" scrollListener="item4" activeClass="active">Main 4</div>
+  <div class="menu-item" scrollListener="item5" activeClass="active">Main 5</div>
+</div>
+<div class="content main" scrollContainer>
+  <div class="band b1" scrollTarget="item1">
+    <span>Main 1</span>
+    <app-hint-arrow class="bounce"></app-hint-arrow>
+  </div>
+
+  <div class="band b2" scrollTarget="item2">
+    <div class="nested-tracker">
+      <div class="dot" scrollListener="item1" container="nested" activeClass="active"></div>
+      <div class="dot" scrollListener="item2" container="nested" activeClass="active"></div>
+      <div class="dot" scrollListener="item3" container="nested" activeClass="active"></div>
+    </div>
+    <div class="content nested" scrollContainer="nested">
+      <div class="band n1" scrollTarget="item1"><span>Nested 1</span></div>
+      <div class="band n2" scrollTarget="item2"><span>Nested 2</span></div>
+      <div class="band n3" scrollTarget="item3"><span>Nested 3</span></div>
+    </div>
+  </div>
+
+  <div class="band b3" scrollTarget="item3"><span>Main 3</span></div>
+  <div class="band b4" scrollTarget="item4"><span>Main 4</span></div>
+  <div class="band b5" scrollTarget="item5"><span>Main 5</span></div>
+</div>

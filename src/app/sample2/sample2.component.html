@@ -1,0 +1,40 @@
+<div class="sample2-container">
+
+  <div class="left">
+    <div class="menu">
+      <div class="menu-item" scrollListener="item1" container="container-1" activeClass="active">Left 1</div>
+      <div class="menu-item" scrollListener="item2" container="container-1" activeClass="active">Left 2</div>
+      <div class="menu-item" scrollListener="item3" container="container-1" activeClass="active">Left 3</div>
+      <div class="menu-item" scrollListener="item4" container="container-1" activeClass="active">Left 4</div>
+      <div class="menu-item" scrollListener="item5" container="container-1" activeClass="active">Left 5</div>
+    </div>
+    <div class="content" scrollContainer="container-1">
+      <div class="band b1" scrollTarget="item1">
+        <span>Left 1</span>
+        <app-hint-arrow class="bounce"></app-hint-arrow>
+      </div>
+      <div class="band b2" scrollTarget="item2"><span>Left 2</span></div>
+      <div class="band b3" scrollTarget="item3"><span>Left 3</span></div>
+      <div class="band b4" scrollTarget="item4"><span>Left 4</span></div>
+      <div class="band b5" scrollTarget="item5"><span>Left 5</span></div>
+    </div>
+  </div>
+
+  <div class="right" scrollContainerListener="container-2" (activeChange)="rightActive = $event">
+    <div class="right-track">
+      <span>Active:</span>
+      <span>{{rightActive || ''}}</span>
+    </div>
+    <div class="content" scrollContainer="container-2">
+      <div class="band b6" scrollTarget="Right 1">
+        <span>Right 1</span>
+        <app-hint-arrow class="bounce"></app-hint-arrow>
+      </div>
+      <div class="band b7" scrollTarget="Right 2"><span>Right 2</span></div>
+      <div class="band b8" scrollTarget="Right 3"><span>Right 3</span></div>
+      <div class="band b9" scrollTarget="Right 4"><span>Right 4</span></div>
+      <div class="band b10" scrollTarget="Right 5"><span>Right 5</span></div>
+    </div>
+  </div>
+
+</div>

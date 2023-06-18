@@ -1,0 +1,92 @@
+.sample2-container {
+  height: 100%;
+  display: flex;
+
+  .left {
+    flex: 0 0 60%;
+
+    .content {
+      margin-left: 200px;
+    }
+  }
+
+  .right {
+    flex: 0 0 40%;
+  }
+
+  .right-track {
+    position: absolute;
+    top:20px;
+    right: 40px;
+    z-index: 10;
+    color: white;
+    font-size: 16px;
+
+    > span {
+      display: block;
+      text-align: right;
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  box-sizing: border-box;
+  width: 198px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--sidebar-bg);
+  margin-right: 2px;
+
+  .menu-item {
+    height: 30px;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--sidebar-item-border);
+    color: var(--sidebar-active-color);
+    display: flex;
+    align-items: center;
+
+    &.active {
+      background: var(--sidebar-active-bg);
+    }
+  }
+}
+
+.content {
+  color: white;
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+
+  .band {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+
+    &.b1 { background: var(--band-1); }
+    &.b2 { background: var(--band-2); }
+    &.b3 { background: var(--band-3); }
+    &.b4 { background: var(--band-4); }
+    &.b5 { background: var(--band-5); }
+    &.b6 { background: var(--band-6); }
+    &.b7 { background: var(--band-7); }
+    &.b8 { background: var(--band-8); }
+    &.b9 { background: var(--band-9); }
+    &.b10 { background: var(--band-10); }
+
+    app-hint-arrow {
+      position: absolute;
+      bottom: 100px;
+    }
+
+    span {
+      margin-top: -30px;
+      font-size: 20px;
+    }
+  }
+}

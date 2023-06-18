@@ -1,0 +1,11 @@
+<app-navbar
+  [items]="navbarItems"
+  [activeItem]="navbarActive"
+  (activeChange)="navbarActive = $event"
+></app-navbar>
+
+<div class="content">
+  <app-sample1 *ngIf="navbarActive === 'Simple'"></app-sample1>
+  <app-sample2 *ngIf="navbarActive === 'Multiple'"></app-sample2>
+  <app-sample3 *ngIf="navbarActive === 'Nested'"></app-sample3>
+</div>

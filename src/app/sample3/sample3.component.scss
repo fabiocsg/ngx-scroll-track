@@ -1,0 +1,92 @@
+.menu {
+  position: absolute;
+  box-sizing: border-box;
+  width: 198px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--sidebar-bg);
+  margin-right: 2px;
+
+  .menu-item {
+    height: 30px;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--sidebar-item-border);
+    color: var(--sidebar-active-color);
+    display: flex;
+    align-items: center;
+
+    &.active {
+      background: var(--sidebar-active-bg);
+    }
+  }
+}
+
+.content {
+  color: white;
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+
+  &.main {
+    margin-left: 200px;
+  }
+
+  &.nested {
+    width: 100%;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+  }
+
+  .band {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+
+    &.b1 { background: var(--band-1); }
+    &.b2 { background: var(--band-2); }
+    &.b3 { background: var(--band-3); }
+    &.b4 { background: var(--band-4); }
+    &.b5 { background: var(--band-5); }
+    &.n1 { background: var(--nested-1); }
+    &.n2 { background: var(--nested-2); }
+    &.n3 { background: var(--nested-3); }
+
+    app-hint-arrow {
+      position: absolute;
+      bottom: 100px;
+    }
+
+    span {
+      margin-top: -30px;
+      font-size: 20px;
+    }
+  }
+}
+
+.nested-tracker {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  .dot {
+    margin: 8px;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--dot-border);
+    background: var(--dot-bg);
+    transition: background 100ms linear;
+
+    &.active {
+      background: var(--dot-active-bg);
+    }
+  }
+}
